@@ -43,7 +43,7 @@
             android:layout_weight="2"
             android:layout_height="wrap_content"
             android:textColor="#FFF"
-            android:text="Alamat"/>
+            android:text="Nominal"/>
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:textColor="#FFF"
@@ -68,7 +68,7 @@
             android:layout_weight="2"
             android:layout_height="wrap_content"
             android:textColor="#FFF"
-            android:text="Jenis Kelamin"/>
+            android:text="Aplikasi Arisan"/>
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:textColor="#FFF"

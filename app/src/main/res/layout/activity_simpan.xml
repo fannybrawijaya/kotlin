@@ -16,14 +16,14 @@
     <androidx.appcompat.widget.AppCompatEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Alamat"
+        android:hint="Nominal"
         android:layout_margin="10dp"
         android:id="@+id/et_alamat"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Jenis Kelamin"
+        android:text=" "
         android:layout_margin="10dp"/>
 
     <RadioGroup
@@ -38,14 +38,15 @@
             android:layout_width="match_parent"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Laki-Laki"
+            android:text=" "
             android:id="@+id/rb_L"/>
+
         <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rb_P"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Perempuan"
-            android:id="@+id/rb_P"/>
+            android:text=" " />
     </RadioGroup>
 
     <androidx.appcompat.widget.AppCompatButton

@@ -31,7 +31,7 @@ class tampil : AppCompatActivity() {
         tampil_data()
     }
     fun tampil_data () {
-        AndroidNetworking.get("http://192.168.1.27/api/tampil.php")
+        AndroidNetworking.get("http://192.168.43.63/api/tampil.php")
                 .setPriority(Priority.LOW)
                 .build()
                 .getAsJSONObject(object : JSONObjectRequestListener {

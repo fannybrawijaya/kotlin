@@ -1,12 +1,19 @@
 package com.fannybrawijaya.crud
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
+import com.androidnetworking.AndroidNetworking
+import com.androidnetworking.common.Priority
+import com.androidnetworking.error.ANError
+import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.fannybrawijaya.crud.databinding.CostumTampilBinding
+import org.json.JSONObject
 
 class adapter(private val context: Context, private val results: ArrayList<model>) : RecyclerView.Adapter<adapter.MyHolder>() {
     private var Items = ArrayList<model>()
@@ -51,7 +58,7 @@ class adapter(private val context: Context, private val results: ArrayList<model
                         }
 
                         1 -> {
-
+                            hapus(result.id_crud)
                         }
 
                         2 -> {
@@ -70,5 +77,27 @@ class adapter(private val context: Context, private val results: ArrayList<model
         return Items.size
     }
 
+    fun hapus (id : String){
+        AndroidNetworking.post("http://192.168.43.63/api/hapus.php")
+                .addBodyParameter("id", id)
+                .setPriority(Priority.MEDIUM)
+                .build()
+                .getAsJSONObject(object : JSONObjectRequestListener {
+                    override fun onResponse(response: JSONObject) {
+                        if (response.getInt("success") ==1){
+                            Toast.makeText(context,response.getString("pesan"), Toast.LENGTH_SHORT).show()
+                            (context as Activity).finish()
+                        }else{
+                            Toast.makeText(context,response.getString("pesan"), Toast.LENGTH_SHORT).show()
+                        }
+                    }
+
+                    override fun onError(error: ANError) {
+                        Toast.makeText(context,error.toString(), Toast.LENGTH_SHORT).show()
+
+                    }
+                })
+
+    }
 
 }

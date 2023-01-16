@@ -31,7 +31,7 @@ class simpan : AppCompatActivity() {
                 binding.etAlamat.requestFocus()
             }else{
                 ///simpandata
-                AndroidNetworking.post("http://192.168.100.5/api/simpan.php")
+                AndroidNetworking.post("http://192.168.43.63/api/simpan.php")
                     .addBodyParameter("nama", nama)
                     .addBodyParameter("jenis_kelamin", jk)
                     .addBodyParameter("alamat", alamat)

@@ -7,19 +7,24 @@
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".MainActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="294dp"
+        android:layoutDirection="rtl"
+        android:src="@drawable/x" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Pendaftaran" />
+        android:text="Peserta Arisan" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/by_tampil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Hasil" />
+        android:text="Hasil Undian" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
